@@ -3,6 +3,7 @@ import cors from 'cors';
 
 import productRoutes from './routes/product.routes';
 import orderRoutes from './routes/order.routes';
+import whatsappWebhookRoutes from './routes/whatsapp.routes';
 
 const app = express();
 
@@ -24,5 +25,10 @@ app.get('/api/health', (_req, res) => {
 app.use('/api/products', productRoutes);
 
 app.use('/api/orders', orderRoutes);
+
+app.use(
+  '/webhook/whatsapp',
+  whatsappWebhookRoutes
+);
 
 export default app;
