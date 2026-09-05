@@ -134,7 +134,7 @@ export const sendOrderWhatsAppMessage = async ({
                     name: 'order_confirmation',
 
                     language: {
-                        code: 'en_US',
+                        code: 'en',
                     },
 
                     components: [
